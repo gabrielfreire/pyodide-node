@@ -1,0 +1,23 @@
+{
+  "name": "pyodide_node",
+  "version": "0.0.0",
+  "description": "Node.js pyodide",
+  "main": "./src/PyodideNode.js",
+  "engines": {
+    "node": ">=8.11"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "mocha src/test/PyodideNode.test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^10.9.4",
+    "expect.js": "^0.3.1",
+    "mocha": "^5.2.0"
+  },
+  "dependencies": {
+    "isomorphic-fetch": "^2.2.1"
+  }
+}

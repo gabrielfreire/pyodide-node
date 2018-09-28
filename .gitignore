@@ -1,0 +1,6 @@
+node_modules
+dist
+dist-esm
+release
+webpack.config.ref.js
+tsconfig.ref.json
