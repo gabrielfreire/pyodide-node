@@ -10,7 +10,10 @@ When inside a browser, this means Python has full access to the Web APIs.
 This is a temporary Node.js version.
 
 # Building
-
+## Requirements
+- Node v8.x +
+`git clone https://github.com/gabrielfreire/pyodide-node.git`
+`cd pyodide-node`
 `npm install`
 
 # Testing
