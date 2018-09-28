@@ -20,4 +20,4 @@ This is a temporary Node.js version.
 
 # Testing
 
-`npm run tests`
+`npm test`
