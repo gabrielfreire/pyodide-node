@@ -7,9 +7,8 @@
     "node": ">=8.11"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-    "tests": "mocha src/test/PyodideNode.test.js"
+    "test": "mocha src/test/PyodideNode.test.js"
   },
   "author": "",
   "license": "ISC",
