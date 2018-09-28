@@ -1,6 +1,7 @@
 # Pyodide
 
 [![Build Status](https://circleci.com/gh/iodide-project/pyodide.png)](https://circleci.com/gh/iodide-project/pyodide)
+[![Build Status](https://travis-ci.com/gabrielfreire/pyodide-node.svg?branch=master)](https://travis-ci.com/gabrielfreire/pyodide-node)
 
 The Python scientific stack, compiled to WebAssembly.
 
