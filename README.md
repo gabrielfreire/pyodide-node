@@ -12,9 +12,10 @@ This is a temporary Node.js version.
 # Building
 ## Requirements
 - Node v8.x +
-`git clone https://github.com/gabrielfreire/pyodide-node.git`
-`cd pyodide-node`
-`npm install`
+
+- `git clone https://github.com/gabrielfreire/pyodide-node.git`
+- `cd pyodide-node`
+- `npm install`
 
 # Testing
 
