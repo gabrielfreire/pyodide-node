@@ -1,5 +1,6 @@
 language: node_js
-install: 
+install:
+  - npm config set engine-strict true
   - npm install
   - npm run tests
 
