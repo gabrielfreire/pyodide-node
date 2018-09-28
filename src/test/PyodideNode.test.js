@@ -25,7 +25,7 @@ describe('Python', function() {
             expect(result).not.to.be(undefined);
             expect(result).to.be(expected);
         });
-        it('should import numpy', async function() {
+        it('should import numpy and perform operations', async function() {
             this.timeout(20000);
             var pyodide = pyodideNode.getModule();
             await pyodide.loadPackage('numpy');
@@ -38,15 +38,15 @@ describe('Python', function() {
                 '   c = np.concatenate([b, a])\n' +
                 '   return c.tolist()');
             const test = pyodide.pyimport('test');
-            const concatenated = test();
+            const result = test();
             const expected = new Array(0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 1, 2, 3);
 
-            expect(concatenated).not.to.be(undefined);
-            expect(concatenated.constructor.name).to.equal("Array");
-            expect(concatenated[0]).to.equal(expected[0]);
-            expect(concatenated[1]).to.equal(expected[1]);
-            expect(concatenated[3]).to.equal(expected[3]);
-            expect(concatenated[concatenated.length-1]).to.equal(expected[expected.length-1]);
+            expect(result).not.to.be(undefined);
+            expect(result.constructor.name).to.equal("Array");
+            expect(result[0]).to.equal(expected[0]);
+            expect(result[1]).to.equal(expected[1]);
+            expect(result[3]).to.equal(expected[3]);
+            expect(result[result.length-1]).to.equal(expected[expected.length-1]);
         });
     });
 });
