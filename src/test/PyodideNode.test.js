@@ -36,12 +36,17 @@ describe('Python', function() {
                 '   a = np.array([1, 2, 3])\n' +
                 '   b = np.arange(0, 100, 5)\n' +
                 '   c = np.concatenate([b, a])\n' +
-                '   print(a)\n' +
-                '   print(b)\n' +
                 '   return c.tolist()');
             const test = pyodide.pyimport('test');
             const concatenated = test();
+            const expected = new Array(0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 1, 2, 3);
+
             expect(concatenated).not.to.be(undefined);
+            expect(concatenated.constructor.name).to.equal("Array");
+            expect(concatenated[0]).to.equal(expected[0]);
+            expect(concatenated[1]).to.equal(expected[1]);
+            expect(concatenated[3]).to.equal(expected[3]);
+            expect(concatenated[concatenated.length-1]).to.equal(expected[expected.length-1]);
         });
     });
 });
