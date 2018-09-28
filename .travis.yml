@@ -1,4 +1,5 @@
 language: node_js
+before_install: nvm install 8.11
 install:
   - npm install
   - npm run tests
