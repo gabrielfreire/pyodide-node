@@ -30,8 +30,8 @@ class PyodideNode {
         }
     }
     getModule() {
-        if(!process.pyodide) throw "Pyodide wasn't loaded yet"
-        return process.pyodide;
+        if(!process['pyodide']) throw "Pyodide wasn't loaded yet"
+        return process['pyodide'];
     }
     
     loadLanguage() {
@@ -69,13 +69,13 @@ class PyodideNode {
                     pyodide['loadPackage'] = self._loadPackage;
                     pyodide['locateFile'] = (path) => `${localPyodidePackagesURL}/${path}`;
                     process['Module'] = null;
-                    pyodide._module = pyodide;
+                    // pyodide._module = Module;
                     process['pyodide'] = pyodide;
                     console.log('Loaded Python');
                     resolve();
                 };
                 /* get module from remote location */
-                
+
                 // const fetchedFile = await self._fetch_node(externalPyodideModuleInitializer);
                 // const buffer = await fetchedFile.buffer();
                 // if(!buffer) reject('There is no buffer');
