@@ -74,13 +74,15 @@ class PyodideNode {
                     console.log('Loaded Python');
                     resolve();
                 };
-                // get module from remote location
+                /* get module from remote location */
+                
                 // const fetchedFile = await self._fetch_node(externalPyodideModuleInitializer);
                 // const buffer = await fetchedFile.buffer();
                 // if(!buffer) reject('There is no buffer');
+
                 // eval module code
-                let pyodideModuleInitializer = require('./assets/pyodide.asm.js');
-                // let pyodideModuleInitializer = eval(buffer.toString());
+                let pyodideModuleInitializer = require('./assets/pyodide.asm.js'); // local module
+                // let pyodideModuleInitializer = eval(buffer.toString()); // uncomment if module is from remote location
                 // load module
                 pyodide = pyodideModuleInitializer(Module);
             }).catch((e) => {

@@ -36,8 +36,6 @@ Module.expectedDataFileDownloads++;
     var REMOTE_PACKAGE_NAME = Module["locateFile"] ? Module["locateFile"](REMOTE_PACKAGE_BASE, "") : REMOTE_PACKAGE_BASE;
     var REMOTE_PACKAGE_SIZE = metadata.remote_package_size;
     var PACKAGE_UUID = metadata.package_uuid;
-    console.log(Module["locateFile"]);
-    console.log(REMOTE_PACKAGE_NAME);
     function fetchRemotePackage(packageName, packageSize, callback, errback) {
       if (typeof XMLHttpRequest !== 'undefined') { // BROWSER
         var xhr = new XMLHttpRequest();

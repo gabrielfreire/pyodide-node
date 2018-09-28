@@ -91,7 +91,7 @@ Module.expectedDataFileDownloads++;
         fetch_node(packageName).then((buffer) => buffer.buffer()).then((packageData) => {
           if (!Module.dataFileDownloads) {
             if (Module['setStatus']) Module['setStatus']('Downloading data...');
-            console.log('Downloading ' + packageName + 'data...');
+            console.log('Downloading ' + packageName + ' data...');
           } else {
             Module.dataFileDownloads[packageName] = {
                 loaded: packageSize,
